@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/packetcodeofficial.github.io/static/css/main.bfb39ccc.css",
+    "main.js": "/packetcodeofficial.github.io/static/js/main.ab234ea4.js",
+    "static/js/787.e58157e9.chunk.js": "/packetcodeofficial.github.io/static/js/787.e58157e9.chunk.js",
+    "index.html": "/packetcodeofficial.github.io/index.html",
+    "main.bfb39ccc.css.map": "/packetcodeofficial.github.io/static/css/main.bfb39ccc.css.map",
+    "main.ab234ea4.js.map": "/packetcodeofficial.github.io/static/js/main.ab234ea4.js.map",
+    "787.e58157e9.chunk.js.map": "/packetcodeofficial.github.io/static/js/787.e58157e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfb39ccc.css",
+    "static/js/main.ab234ea4.js"
+  ]
+}
