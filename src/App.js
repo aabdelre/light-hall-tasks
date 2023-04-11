@@ -3,11 +3,16 @@ import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(localStorage.getItem("Counter"));
+  var [count, setCount] = useState(localStorage.getItem("Counter"));
+
+  if (count == null) {
+    count = 0;
+  }
   localStorage.setItem("Counter", count);
   function handleClick() {
     setCount(parseInt(count) + 1);
     localStorage.setItem("Counter", count);
+    console.log(count);
   }
 
   return (
