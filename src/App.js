@@ -6,7 +6,7 @@ function App() {
   var [count, setCount] = useState(localStorage.getItem("Counter"));
 
   if (count == null) {
-    count = 0;
+    localStorage.setItem("Counter", 0);;
   }
   localStorage.setItem("Counter", count);
   function handleClick() {
