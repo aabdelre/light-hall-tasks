@@ -3,12 +3,14 @@ import './App.css'
 
 
 function App() {
-  var [count, setCount] = useState(0);
+  var [count, setCount] = useState(localStorage.getItem("Counter"));
 
   if (count === "Nan") {
+    console.log("here");
     localStorage.setItem("Counter", 0);;
+  } else {
+    localStorage.setItem("Counter", count);
   }
-  localStorage.setItem("Counter", count);
   function handleClick() {
     setCount(parseInt(count) + 1);
     localStorage.setItem("Counter", count);
