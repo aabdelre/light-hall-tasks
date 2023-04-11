@@ -16,6 +16,7 @@ function App() {
   //console.log(number);
 
   function increment () {
+      setCount(number)
       localStorage.setItem("count", number);
       setCount(parseInt(number) + 1);
       console.log(number);
