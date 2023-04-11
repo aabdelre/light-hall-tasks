@@ -16,9 +16,10 @@ function App() {
   //console.log(number);
 
   function increment () {
+      localStorage.setItem("count", number);
       setCount(parseInt(number) + 1);
       console.log(number);
-      localStorage.setItem("count", number);
+      
   };
   //if(localStorage.getItem("count")) {
   //  number = 0;
@@ -27,7 +28,7 @@ function App() {
     
   return (
     <>
-    <div className="number">{number}</div>
+    <div className="number">Count: {number}</div>
     <button className="button" onClick={increment}>+</button>
     </>
   );

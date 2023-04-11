@@ -25,7 +25,7 @@ body {
   padding: 1rem 0;
   font-size: 2rem;
   cursor: pointer;
-
-  background-color: transparent;
-  transition: background-color 250ms ease-out;
+  border-radius: 100px;
+  border-color: green;
+  color: green;
 }
