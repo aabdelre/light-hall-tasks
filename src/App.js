@@ -3,7 +3,7 @@ import './App.css'
 
 
 function App() {
-  var [count, setCount] = useState(localStorage.getItem("Counter"));
+  const [count, setCount] = useState(localStorage.getItem("Counter"));
 
   if (count === "Nan") {
     console.log("here");
