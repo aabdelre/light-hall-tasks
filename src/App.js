@@ -3,30 +3,18 @@ import './App.css';
 
 function App() {
   //localStorage.clear();
-  var [number, setCount] = useState(localStorage.getItem("count"));
+  var [number, setCount] = useState(parseInt(localStorage.getItem("count")) + 1);
   if(isNaN(localStorage.getItem("count"))) {
     number = 0;
   }
-  
-  //const storeCount = () => {
-  //  localStorage.setItem("count", number);
-  //  
-  //};
-  //setCount();
-  //console.log(number);
 
   function increment () {
       setCount(number)
       localStorage.setItem("count", number);
       setCount(parseInt(number) + 1);
+      localStorage.setItem("count", number);
       console.log(number);
-      
-  };
-  //if(localStorage.getItem("count")) {
-  //  number = 0;
-  //  setCount(number + 1);
-  //}
-    
+  }; 
   return (
     <>
     <div className="number">Count: {number}</div>
