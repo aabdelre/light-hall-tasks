@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  //localStorage.clear();
+  var [number, setCount] = useState(localStorage.getItem("count"));
+  if(isNaN(localStorage.getItem("count"))) {
+    number = 0;
+  }
+  
+  //const storeCount = () => {
+  //  localStorage.setItem("count", number);
+  //  
+  //};
+  //setCount();
+  //console.log(number);
+
+  function increment () {
+      setCount(parseInt(number) + 1);
+      console.log(number);
+      localStorage.setItem("count", number);
+  };
+  //if(localStorage.getItem("count")) {
+  //  number = 0;
+  //  setCount(number + 1);
+  //}
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className="number">{number}</div>
+    <button className="button" onClick={increment}>+</button>
+    </>
   );
 }
 
